@@ -1,0 +1,4 @@
+pip freeze --local --disable-pip-version-check \
+ | grep -v '^\-e' \
+ | cut -d = -f 1  \
+ | xargs -n1 pip install -U --disable-pip-version-check
