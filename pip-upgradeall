@@ -1,3 +1,4 @@
+# Upgrade all installed global pip packages
 pip freeze --local --disable-pip-version-check \
  | grep -v '^\-e' \
  | cut -d = -f 1  \
